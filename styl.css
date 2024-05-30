@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+td{
+    min-width: 100px;
+    min-height: 100px;
+    border: 1px solid black;
+}
+
+#gameBoard td img{
+    width: 90px;
+    height: 90px;
+}
+
+#gameBoard td{
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(60, 255, 0);
+    background: rgb(154, 255, 124);
+}
+
+#gameBoard td:hover{
+    background: rgb(123, 228, 91);
+
+}
+
+#resources{
+    
+    width: 300px;
+}
+
+#recipes{
+    width: 200px;
+    height: 415px;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; 
+    overflow: auto;
+
+}
+
+.recipe{
+    width: 100%;
+    height: 30px;
+    font-size: 120%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.recipe:hover{
+    background: #f0f0f0;
+}
+
+hr{
+    width: 96%;
+    display: flex;
+    margin: auto;
+}
+
+#craftButton{
+    height: 30px;
+    text-align: center;
+    vertical-align:middle;
+}
+
+p{
+    padding: 1px 0;
+}
+
+#nextButton{
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+#nextButton:hover{
+    background: gray;
+}
+
+.inactive{
+    background: #cecece;
+}
+.active{
+    background: #62ff3f;
+}
+
+#build{
+    width: 418px;
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: auto;
+    font-size: 90%;
+}
+
+.bulding {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+    flex: 0 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #cecece;
+}
+
+.bulding:hover{
+    background-color: #ececec;
+}

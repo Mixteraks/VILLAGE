@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+  <title>GRA</title>
+  <meta charset="UTF-8">
+  <link href="styl.css"  rel="stylesheet">
+ </head>
+
+<body>
+    <table>
+        <tr>
+            <td rowspan="2">
+                <!-- Board -->
+                <table id="gameBoard">
+                    <tr>
+                        <td class="boardSquare" data-code="A1"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="A2"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="A3"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="A4"><img src="image/grass.png"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="boardSquare" data-code="B1"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="B2"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="B3"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="B4"><img src="image/grass.png"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="boardSquare" data-code="C1"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="C2"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="C3"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="C4"><img src="image/grass.png"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="boardSquare" data-code="D1"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="D2"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="D3"><img src="image/grass.png"></td>
+                        <td class="boardSquare" data-code="D4"><img src="image/grass.png"></td>
+                    </tr>
+                </table>
+            </td>
+
+            <!-- Crafting i resorces -->
+            <td id="crafting" rowspan="2">
+                <div id="recipes">
+                    <div class="recipe">
+                        <label>2</label>
+                        <img src="image/resources/raw_Iron.png" width="28px" height="28px" id="input"></img>
+                        <img src="image/arrow.png" width="28px" height="28px"></img>
+                        <label>1</label>
+                        <img src="image/resources/Iron_Ingot.png" width="28px" height="28px" id="output"></img>
+                    </div>
+
+                    <div class="recipe">
+                        <label>5</label>
+                        <img src="image/resources/iron_ingot.png" width="28px" height="28px" id="input"></img>
+                        <img src="image/arrow.png" width="28px" height="28px"></img>
+                        <label>1</label>
+                        <img src="image/resources/gold_ingot.png" width="28px" height="28px" id="output"></img>
+                    </div>
+                </div>
+            </td>
+
+            <td rowspan="2" id="resources">
+                <p id="day">Dzień: 1</p>
+                <p id="people">Ludność: 5</p>
+                <p id="unemploy">Bezrobotni: 5</p>
+                <p id="warrior">Obrońcy: 0</p>
+                <p id="healt">Zdrowie: 100</p>
+                <p id="caloric">Zapotrzebowanie Kaloryczne: 50 kcal/dzień</p>
+                <p id="power">Moc: 10</p>
+                <p id="defence">Siła Obrony: 0</p>
+                <hr>
+                <hr>
+                <p id="food">Kalorie: 150 kcal</p>
+                <p id="wood">Drewno: 0</p>
+                <p id="rock">Kamień: 0</p>
+                <p id="wheat">Przenica: 0</p>
+                <p id="raw">Ruda Żelaza: 0</p>
+                <p id="iron">Żelazo: 0</p>
+                <p id="gold">Złoto: 10</p>
+            </td>
+        </tr>
+
+        <tr>
+            <!-- <td id="craftButton" class="inactive">
+                CRAFT
+            </td> -->
+        </tr>
+
+        <tr>
+            <!-- Budowa -->
+            <td id="build" rowspan="2">
+                <div class="bulding" data-value="las">
+                    <p>Las</p>
+                    <p>3 Złoto</p>
+                </div>
+                <div class="bulding" data-value="kopalniaI">
+                    <p>Kamieniołom</p>
+                    <p>3 Złoto</p>
+                    <p>5 Drewna</p>
+                </div>
+                <div class="bulding" data-value="hata">
+                    <p>Hata</p>
+                    <p>5 Drewna</p>
+                </div>
+                <div class="bulding" data-value="dom">
+                    <p>Dom</p>
+                    <p>7 Drewna</p>
+                    <p>3 Kamienia</p>
+                </div>
+                <div class="bulding" data-value="kamienica">
+                    <p>Kamienica</p>
+                    <p>4 Drewna</p>
+                    <p>20 Kamienia</p>
+                    <p>2 Żelaza</p>
+                </div>
+                <div class="bulding" data-value="market">
+                    <p>Market</p>
+                    <p>4 Drewna</p>
+                    <p>3 Kamień</p>
+                </div>
+                <div class="bulding" data-value="farma">
+                    <p>Farma</p>
+                    <p>10 Drewna</p>
+                    <p>3 Kamień</p>
+                    <p>2 Złoto</p>
+                </div>
+                <div class="bulding" data-value="huta">
+                    <p>Huta</p>
+                    <p>5 Drewna</p>
+                    <p>20 Kamień</p>
+                    <p>3 Ruda Żelazo</p>
+                </div>
+            </td>
+
+            <!-- Menu -->
+            <td colspan="2" id="nextButton">
+                <div >
+                    NEXT DAY
+                </div>
+            </td>
+        </tr>
+    </table>
+    <label id="actionInfo"></label>
+    <script src="js/gameMechanics.js"></script>
+    
+ </body>
+</html>
