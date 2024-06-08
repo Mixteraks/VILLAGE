@@ -4,15 +4,73 @@
     user-select: none;
 }
 
+body{
+    background-color: #0e0e0e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    background-color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.button{
+    background-color: #fff;
+    padding: 15px;
+    width: 200px;
+    margin: auto;
+    color: #000;
+}
+
+.button:hover{
+    background-color: #dbdada;
+}
+
+footer{
+    font-family: monospace;
+    font-size: 110%;
+    width: 100%;
+    /* height: 30px; */
+    color:#f0f0f0;
+    vertical-align: middle;
+    text-align: center;
+    padding: 30px 0;
+    background: #0e0e0e;
+    margin-top: 10px;
+}
+
+footer a{
+    color: #f5911f;
+}
+
+b{
+    font-weight: bolder;
+    color: #f5911f;
+}
+
+header img{
+    height: 80px;
+    margin: 10px;
+}
+
 td{
     min-width: 100px;
     min-height: 100px;
     border: 1px solid black;
+    background-color: #fff;
 }
 
 #gameBoard td img{
     width: 90px;
     height: 90px;
+    filter: none;
 }
 
 #gameBoard td{
@@ -20,6 +78,7 @@ td{
     height: 100px;
     border: 1px solid rgb(60, 255, 0);
     background: rgb(154, 255, 124);
+    cursor:crosshair;
 }
 
 #gameBoard td:hover{
@@ -27,8 +86,17 @@ td{
 
 }
 
-#resources{
-    
+.used{
+    background-color: red;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#resorces{
+    display:inline;
+    text-align: start;
     width: 300px;
 }
 
@@ -41,6 +109,11 @@ td{
     flex-wrap: nowrap; 
     overflow: auto;
 
+}
+
+.recipe img{
+    width: 28px;
+    height: 28px;
 }
 
 .recipe{
@@ -70,8 +143,24 @@ p{
     padding: 1px 0;
 }
 
+#tips{
+    display:inline;
+    text-wrap: balance;
+}
+
+#generate{
+    text-align: center;
+    vertical-align: middle;
+}
+#generate:hover{
+    background: gray;
+}
+
+#generate:hover.used{
+    background: rgb(117, 0, 0);
+}
+
 #nextButton{
-    height: 100px;
     text-align: center;
     vertical-align: middle;
 }
@@ -89,8 +178,9 @@ p{
 #build{
     width: 418px;
     display: flex;
-    flex-wrap: nowrap; 
-    overflow: auto;
+    justify-content: center;
+    flex-wrap: wrap; 
+    /* overflow: auto; */
     font-size: 90%;
 }
 
@@ -101,10 +191,9 @@ p{
     margin: 2px;
     flex: 0 0 auto;
     text-align: center;
-    vertical-align: middle;
     background-color: #cecece;
 }
 
 .bulding:hover{
-    background-color: #ececec;
+    background-color: #a4a4a4;
 }
